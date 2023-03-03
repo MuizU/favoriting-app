@@ -5,7 +5,6 @@ export default function Footer() {
     return (
       <div
         className={style.footer}
-        style={{ position: "absolute", bottom: 0, width: "100%" }}
       >
         <nav>
           <ul>
