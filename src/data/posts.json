@@ -1,0 +1,102 @@
+[
+    {
+        "id": "c3a26e33-4c1d-4bc1-8e43-4e4a4c4f5557",
+        "user": "michaelg",
+        "likes": 120,
+        "title": "Clear iPhone 12 Case",
+        "image": "https://cdn.pixabay.com/photo/2021/02/22/16/56/iphone-6048617_1280.jpg",
+        "caption": "Protect your iPhone 12 with this clear case! #iphone12 #clearcase #phoneaccessories",
+        "price": 12.99,
+        "isFavorite": true
+    },
+    {
+        "id": "2bbad7f4-60f4-4d3e-9f77-65c89d308d91",
+        "user": "maryjane",
+        "likes": 87,
+        "title": "Leather Samsung Galaxy S21 Case",
+        "image": "https://cdn.pixabay.com/photo/2020/11/24/09/06/samsung-galaxy-s21-5772505_1280.jpg",
+        "caption": "Protect your Samsung Galaxy S21 in style with this leather case! #samsunggalaxys21 #leathercase #phoneaccessories",
+        "price": 24.99,
+        "isFavorite": true
+    },
+    {
+        "id": "a24e6f09-6e57-43c2-8f7c-b67e9e9b4606",
+        "user": "davidsmith",
+        "likes": 55,
+        "title": "Silicone iPhone XR Case",
+        "image": "https://cdn.pixabay.com/photo/2021/02/09/19/54/iphone-xr-5995005_1280.jpg",
+        "caption": "Keep your iPhone XR safe with this durable silicone case! #iphonexr #siliconecase #phoneaccessories",
+        "price": 9.99,
+        "isFavorite": false
+    },
+    {
+        "id": "e71691c7-f28d-437f-a93c-f5360b8a7c0e",
+        "user": "johnwick",
+        "likes": 33,
+        "title": "Hardshell iPhone 11 Pro Max Case",
+        "image": "https://cdn.pixabay.com/photo/2021/02/11/09/52/iphone-11-pro-max-6002053_1280.jpg",
+        "caption": "Protect your iPhone 11 Pro Max with this hardshell case! #iphone11promax #hardshellcase #phoneaccessories",
+        "price": 14.99,
+        "isFavorite": true
+    },
+    {
+        "id": "1e5e64a5-5c5a-45c3-ae5b-271132fe7c29",
+        "user": "johndoe",
+        "likes": 78,
+        "title": "Carbon Fiber iPhone XS Max Case",
+        "image": "https://cdn.pixabay.com/photo/2021/02/11/09/50/iphone-xs-max-6002044_1280.jpg",
+        "caption": "Protect your iPhone XS Max with this sleek carbon fiber case! #iphonexsmax #carbonfibercase #phoneaccessories",
+        "price": 19.99,
+        "isFavorite": false
+    },
+    {
+        "id": "2fc4cf4d-fef4-4d4c-8c10-f3e7f7142e88",
+        "user": "micsmith",
+        "likes": 102,
+        "title": "Marble iPhone 12 Pro Case",
+        "image": "https://cdn.pixabay.com/photo/2021/01/26/09/29/iphone-12-pro-5845905_1280.jpg",
+        "caption": "Protect your iPhone 12 Pro with this beautiful marble case! #iphone12pro #marblecase #phoneaccessories",
+        "price": 17.99,
+        "isFavorite": true
+    },
+    {
+        "id": "e201ec75-73d6-4083-b161-5d5eb2b5e5b3",
+        "user": "paulgraham",
+        "likes": 67,
+        "title": "Transparent iPhone SE (2020) Case",
+        "image": "https://cdn.pixabay.com/photo/2021/02/17/14/12/iphone-se-2020-6018792_1280.jpg",
+        "caption": "Protect your iPhone SE (2020) without hiding its design! #iphonese #transparentcase #phoneaccessories",
+        "price": 8.99,
+        "isFavorite": false
+    },
+    {
+        "id": "1d635cf3-bf3c-47a2-8aa1-bbbab1a09029",
+        "user": "wangxiao",
+        "likes": 91,
+        "title": "Leather iPhone 11 Case",
+        "image": "https://cdn.pixabay.com/photo/2021/02/09/19/54/iphone-11-5995010_1280.jpg",
+        "caption": "Protect your iPhone 11 in style with this leather case! #iphone11 #leathercase #phoneaccessories",
+        "price": 22.99,
+        "isFavorite": true
+    },
+    {
+        "id": "7a79a5f5-3a5a-44eb-8b5d-9f9f3c4d4b13",
+        "user": "ehoffman",
+        "likes": 44,
+        "title": "Silicone Samsung Galaxy Note 20 Ultra Case",
+        "image": "https://cdn.pixabay.com/photo/2021/01/06/12/57/samsung-galaxy-note-20-ultra-5881876_1280.jpg",
+        "caption": "Protect your Samsung Galaxy Note 20 Ultra with this durable silicone case! #samsunggalaxynote20ultra #siliconecase #phoneaccessories",
+        "price": 11.99,
+        "isFavorite": false
+    },
+    {
+        "id": "c3ab2b3f-cd71-4f23-b6c2-9641ee45b7c8",
+        "user": "mcuban",
+        "likes": 75,
+        "title": "Clear iPhone 11 Pro Case",
+        "image": "https://cdn.pixabay.com/photo/2021/01/15/08/03/iphone-11-pro-5894181_1280.jpg",
+        "caption": "Protect your iPhone 11 Pro without hiding its design with this clear case! #iphone11pro #clearcase #phoneaccessories",
+        "price": 12.99,
+        "isFavorite": false
+    }
+]
