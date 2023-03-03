@@ -1,0 +1,17 @@
+@import '../../../styles/base/_mixins'
+@import '../../../styles/base/_colors'
+
+.footer
+    display: none
+    @include mobile
+        display: block
+        background: $tertiary
+        height: 50px
+    nav
+        display: flex
+        justify-content: space-around
+        > ul
+            margin-top: 15px
+            list-style-type: none
+            > li
+                color: $primary
