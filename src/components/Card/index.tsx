@@ -1,5 +1,8 @@
 import Image from "next/image";
 import style from "./styles.module.sass";
+import likeBtn from "../../../public/icons/heart-white-outline.png";
+import likeBtnFill from "../../../public/icons/heart-blue-fill.png";
+
 export interface PostProps {
   id: string;
   user: string;
@@ -11,8 +14,14 @@ export interface PostProps {
   isFavorite: boolean;
 }
 
-const profileLoader = ({ src, width, quality }:any) => {
-  return `https://robohash.org/${src}?w=${width}&q=${quality || 75}`
+const profileLoader = ({ src, width, quality }: any) => {
+  return `https://robohash.org/${src}?w=${width}&q=${quality || 75}`;
+};
+
+function wrapHashtagsInSpan(input: string): string {
+  return input.replace(/#\w+/g, (match) => {
+    return `<span>${match}</span>`;
+  });
 }
 
 export default function Card({
@@ -28,23 +37,57 @@ export default function Card({
   return (
     <div className={style.card}>
       <div className={style.cardHeader}>
-        <div className={style.cardheaderImage}>
+        <div className={style.cardHeaderImage}>
           <Image
             width={24}
             loader={profileLoader}
             height={24}
             src={id}
-            alt="img"
+            alt="dp"
           />
         </div>
-        <p className={style.cardHeaderName}>{user}</p>
+        <span className={style.cardHeaderName}>{user}</span>
       </div>
       <div className={style.cardBody}>
-      <Image
-        width={300}
-        height={300}
-        src={image} alt={""}    />
-
+        <div className={style.cardBodyImage}>
+          <Image fill src={image} alt={"item"} />
+        </div>
+        <div className={style.cardBodyHeader}>
+          <div className={style.cardBodyHeaderLeft}>
+            <div className={style.cardBodyHeaderLeftTitle}>
+              <p>{title}</p>
+            </div>
+            <div className={style.cardBodyHeaderLeftPrice}>
+              <p>AED {price}</p>
+            </div>
+          </div>
+          <div className={style.cardBodyHeaderRight}>
+            <button>
+              <Image src={likeBtn} width={24} height={24} alt={""} />{" "}
+            </button>
+          </div>
+        </div>
+        <div className={style.cardBodyContent}>
+          <div className={style.cardBodyContentLikes}>
+            <div className={style.cardBodyContentLikesIcon}>
+              <Image
+                src={likeBtnFill}
+                width={24}
+                height={24}
+                alt={"like-btn-fill"}
+              />
+            </div>
+            <p className={style.cardBodyContentLikesText}>{likes} likes</p>
+          </div>
+          <div className={style.cardBodyContentCaption}>
+            <p
+              dangerouslySetInnerHTML={{ __html: wrapHashtagsInSpan(caption) }}
+            />
+          </div>
+          <div className={style.cardBodyContentComments}>
+            <p>View 12 comments</p>
+          </div>
+        </div>
       </div>
     </div>
   );
