@@ -1,7 +1,9 @@
 import Image from "next/image";
 import style from "./styles.module.sass";
 import likeBtn from "../../../public/icons/heart-white-outline.png";
+import likeBtnWhiteFill from '../../../public/icons/heart-filled-white.png'
 import likeBtnFill from "../../../public/icons/heart-blue-fill.png";
+import {MouseEvent} from "react";
 
 export interface PostProps {
   id: string;
@@ -12,6 +14,7 @@ export interface PostProps {
   image: string;
   price: number;
   isFavorite: boolean;
+  onFav: (e:MouseEvent<HTMLButtonElement>)=>void
 }
 
 const profileLoader = ({ src, width, quality }: any) => {
@@ -33,8 +36,9 @@ export default function Card({
   image,
   price,
   isFavorite,
+  onFav
 }: PostProps) {
-  return (
+    return (
     <div className={style.card}>
       <div className={style.cardHeader}>
         <div className={style.cardHeaderImage}>
@@ -62,8 +66,8 @@ export default function Card({
             </div>
           </div>
           <div className={style.cardBodyHeaderRight}>
-            <button>
-              <Image src={likeBtn} width={24} height={24} alt={""} />{" "}
+            <button onClick={onFav}>
+              { isFavorite? <Image src={likeBtnWhiteFill} alt="liked" width={24} height={24} /> : <Image src={likeBtn} width={24} height={24} alt={""} />}
             </button>
           </div>
         </div>
