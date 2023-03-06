@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { promises as fs } from 'fs';
-import path from "path";
 import posts from '@/data/posts.json'
 
 
@@ -14,7 +13,9 @@ export default async function toggleFavorite(
     }
     const updatedPosts = posts.map((post: any) => {
         if(post.id === id){
+            const count = post.isFavorite ? post.likes-- : post.likes++;
             return {
+                likes: count,
                 ...post,
                 isFavorite: !post.isFavorite
             }
@@ -22,7 +23,7 @@ export default async function toggleFavorite(
         return post;
     })
     try {
-        fs.writeFile('src/data/posts.json', JSON.stringify(updatedPosts, null, 4));
+        await fs.writeFile('src/data/posts.json', JSON.stringify(updatedPosts, null, 4));
     } catch (error) {
         return res.status(400).json({message: 'Update failed'});
     }
