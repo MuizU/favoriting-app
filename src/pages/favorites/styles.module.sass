@@ -1,4 +1,5 @@
 @import '../../styles/base/_colors'
+@import '../../styles/base/_mixins'
 
 .favorites
   display: flex
@@ -7,7 +8,6 @@
   justify-content: center
   height: 100%
   width: 100%
-  padding: 1rem 1rem 0 1rem
   box-sizing: border-box
   text-align: center
   > h1
@@ -15,6 +15,9 @@
   &List
     padding: 2rem 0 0 0
     display: grid
-    grid-template-columns: 1fr 1fr 1fr 1fr
-    grid-template-rows: 1fr 1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr 
+    grid-template-rows: 1fr 1fr 1fr 
     grid-gap: 2px
+    @include desktop
+        padding: 2rem 2rem
+        grid-gap: 1rem
