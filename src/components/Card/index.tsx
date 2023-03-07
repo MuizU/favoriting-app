@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { ImageLoaderProps } from "next/image";
 import style from "./styles.module.sass";
 import likeBtn from "../../../public/icons/heart-white-outline.png";
 import likeBtnWhiteFill from '../../../public/icons/heart-filled-white.png'
@@ -14,10 +14,13 @@ export interface PostProps {
   image: string;
   price: number;
   isFavorite: boolean;
+}
+interface CardProps extends PostProps{
   onFav: (e:MouseEvent<HTMLButtonElement>)=>void
+
 }
 
-const profileLoader = ({ src, width, quality }: any) => {
+const profileLoader = ({ src, width, quality }: ImageLoaderProps) => {
   return `https://robohash.org/${src}?w=${width}&q=${quality || 75}`;
 };
 
@@ -37,7 +40,7 @@ export default function Card({
   price,
   isFavorite,
   onFav
-}: PostProps) {
+}: CardProps) {
     return (
     <div className={style.card}>
       <div className={style.cardHeader}>
