@@ -3,18 +3,20 @@ import Image from "next/image";
 import RemoveBtn from '../../../public/icons/remove-icon.png'
 import {MouseEvent} from "react";
 
-interface FavoriteCardProps {
+ export interface FavoriteProps {
+    id: string;
     image: string;
     price: string;
-    isFavorite: boolean;
+}
+
+interface FavoriteCardProps extends FavoriteProps {
     onFav: (e: MouseEvent<HTMLButtonElement>) => void
 }
 
-export default function FavoriteCard({image, price, isFavorite, onFav}: FavoriteCardProps) {
+export default function FavoriteCard({image, price,onFav}: FavoriteCardProps) {
 
     return (
         <div className={style.favoriteCard}>
-
             <div className={style.favoriteCardImage}>
                 <Image fill src={image} alt={"item"}/>
             </div>
