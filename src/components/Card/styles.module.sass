@@ -32,26 +32,31 @@
             height: 34vh
             object-fit: cover
             @include desktop
-                height: 60vh
+                height: 50vh
+            @include tablet
+                height: 40vh
+
         &Header
             position: absolute
-            top: 16rem
+            top: 27vh
             left: 0
             width: 100%
             display: flex
             justify-content: space-between
             padding: 0 1rem
             @include desktop
-                top: 33rem
+                top: 43vh
+            @include tablet
+                top: 21.5rem
             &Left
                 color: $primary
                 &Title
                     font-size: 1rem
-                    @include desktop
+                    @include tablet
                         font-size: 1.5rem
                 &Price
                     font-weight: bold
-                    @include desktop
+                    @include tablet
                         font-size: 1rem
 
             &Right

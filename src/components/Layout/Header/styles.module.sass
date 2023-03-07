@@ -2,32 +2,32 @@
 @import '../../../styles/base/_colors'
 
 .header
-    background: $tertiary
-    display: flex
-    flex-direction: column
-    align-items: flex-start
-    justify-content: flex-start
-    position: fixed
-    top: 0
-    left: 0
-    width: 15%
-    height: 100vh
-    z-index: 999
-    padding: 2rem
-    color: $primary
-    @include mobile
-        display: none
-    &Title
-        padding: 0 0 3rem 0
-    &Items
+    display: none
+    @include desktop
+        background: $tertiary
         display: flex
         flex-direction: column
-        >ul > li
-            padding: 0 0 2rem 0
-            list-style-type: none
-            font-weight: bold
-            > a
-                display: flex
-                justify-content: flex-start
-                > span
-                    padding: 0 0 0 1rem
+        align-items: flex-start
+        justify-content: flex-start
+        position: fixed
+        top: 0
+        left: 0
+        width: 15%
+        height: 100vh
+        z-index: 999
+        padding: 2rem
+        color: $primary
+        &Title
+            padding: 0 0 3rem 0
+        &Items
+            display: flex
+            flex-direction: column
+            >ul > li
+                padding: 0 0 2rem 0
+                list-style-type: none
+                font-weight: bold
+                > a
+                    display: flex
+                    justify-content: flex-start
+                    > span
+                        padding: 0 0 0 1rem
