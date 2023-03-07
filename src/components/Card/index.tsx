@@ -46,9 +46,8 @@ export default function Card({
       <div className={style.cardHeader}>
         <div className={style.cardHeaderImage}>
           <Image
-            width={24}
+            fill
             loader={profileLoader}
-            height={24}
             src={id}
             alt="dp"
           />
