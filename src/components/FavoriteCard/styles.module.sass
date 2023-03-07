@@ -1,0 +1,25 @@
+@import '../../styles/base/_colors'
+
+.favoriteCard
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  position: relative
+  > button
+    position: absolute
+    top: 0
+    right: 0
+    border: none
+    background: none
+  &Image
+    position: relative
+    width: 25vw
+    height: 10vh
+    object-fit: cover
+  &Price
+    margin-top: 8vh
+    position: absolute
+    font-size: 0.8rem
+    font-weight: bold
+    color: rgba(0, 0, 0, 0.5)
