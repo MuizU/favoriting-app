@@ -20,21 +20,25 @@
       cursor: pointer
   &Image
     position: relative
-    width: 8.5rem
-    height: 9rem
+    width: 32vw
+    height: 15vh
     object-fit: cover
     @include desktop
       width: 12rem
       height: 16rem
   &Price
-    top: 120px
+    top: 12vh
     position: absolute
     width: 100%
     font-size: 0.8rem
     font-weight: bold
-    right: 2rem
+    right: 1.5rem
     color: $primary
     @include desktop
       top: 168px
-      left: 0
+      left: -3.5rem
       right: 120px
+    @include tablet
+      top: 18vw
+      left: -5rem
+      font-size: 1rem
