@@ -1,6 +1,6 @@
 import Footer from "@/components/Layout/Footer";
 import Header from "@/components/Layout/Header";
-import "@/styles/globals.css";
+import "@/styles/globals.sass";
 import type { AppProps } from "next/app";
 import {Noto_Sans} from "next/font/google";
 
