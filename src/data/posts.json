@@ -10,14 +10,14 @@
         "price": 12.99
     },
     {
-        "likes": 88,
+        "likes": 87,
         "id": "2bbad7f4-60f4-4d3e-9f77-65c89d308d91",
         "user": "maryjane",
         "title": "Samsung Galaxy S21 Case",
         "image": "https://img.freepik.com/free-photo/elegant-smartphone-composition_23-2149437107.jpg",
         "caption": "Protect your Samsung Galaxy S21 in style with this leather case! #samsunggalaxys21 #leathercase #phoneaccessories",
         "price": 24.99,
-        "isFavorite": true
+        "isFavorite": false
     },
     {
         "likes": 55,
