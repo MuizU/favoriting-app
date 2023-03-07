@@ -5,14 +5,20 @@ import { PostProps } from "@/components/Card";
 import style from "@/styles/Home.module.sass";
 import {MouseEvent} from "react";
 import {useState} from "react";
+import { InferGetServerSidePropsType } from "next";
 
 export async function getServerSideProps() {
   const data = await fetch(`${server}/api/get-posts`);
-  const posts = await data.json();
+  const posts:PostProps[] = await data.json()
+  if(!posts){
+    return {
+      notFound: true
+    }
+  }
   return { props: { posts } };
 }
 
-export default function Home({ posts }: any) {
+export default function Home({ posts}:InferGetServerSidePropsType<typeof getServerSideProps>) {
 
     const [postData, setPostData] = useState<PostProps[]>(posts)
 
