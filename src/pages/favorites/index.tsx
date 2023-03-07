@@ -27,7 +27,7 @@ export default function Favorites({ posts }: InferGetServerSidePropsType<typeof 
                 method: 'PUT',
 
             })
-            router.replace(router.asPath)
+            await router.replace(router.asPath)
 
         } catch (e) {
             console.log(e)
